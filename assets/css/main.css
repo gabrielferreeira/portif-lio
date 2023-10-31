@@ -1,22 +1,16 @@
-main {
-    width: 100%;
-}
-
-main #hero {
+#hero {
     background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)), url("../../assets/img/bg-hero.jpg");
-    background-position: center center;
+    background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
     margin-top: 60px;
 }
 
-main section .hero {
+#hero .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 main section .hero .boxContent {
@@ -91,6 +85,14 @@ main section .hero .boxContent .social a {
 
 main section .hero .boxContent .social a:hover {
     color: var(--colorDark);
+}
+
+.hero.hidden {
+    transform: translateY(-100%);
+}
+
+.hero.show {
+    transform: translateY(0);
 }
 
 @media (max-width: 375px) {

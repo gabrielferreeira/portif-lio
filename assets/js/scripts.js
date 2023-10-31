@@ -1,4 +1,17 @@
 const menuItens = document.querySelectorAll('.menu a[href^="#"]');
+const elements = document.querySelectorAll('.hidden');
+
+const myObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    })
+})
+
+elements.forEach((el) => myObserver.observe(el))
 
 menuItens.forEach(item => {
     item.addEventListener('click', scrollSmooth);
