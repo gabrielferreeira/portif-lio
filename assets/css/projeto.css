@@ -82,13 +82,13 @@
     border-radius: 10px;
 }
 
-.boxProjetos:nth-child(2).hidden {
+/* .boxProjetos:nth-child(2).hidden {
     transform: translateX(100%);
 }
 
 .boxProjetos:nth-child(2).show {
     transform: translateX(0);
-}
+} */
 
 @media (max-width: 768px) {
     .projetos .boxProjetos {

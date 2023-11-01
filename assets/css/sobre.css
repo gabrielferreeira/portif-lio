@@ -53,13 +53,13 @@
     color: var(--colorBlue);
 }
 
-.sobreRight.hidden {
+/* .sobreRight.hidden {
     transform: translate(100%);
 }
 
 .sobreRight.show {
     transform: translate(0);
-}
+} */
 
 @media (max-width: 885px) {
     #sobre .sobre .sobreRight .textSobre p {

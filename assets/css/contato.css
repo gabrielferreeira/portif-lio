@@ -103,13 +103,14 @@
     color: var(--colorBlue);
 }
 
+/* 
 .formContato.hidden {
     transform: translateX(100%);
 }
 
 .formContato.show {
     transform: translateX(0);
-}
+} */
 
 
 @media (max-width: 425px) {
