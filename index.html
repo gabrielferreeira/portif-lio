@@ -25,7 +25,7 @@
     <title>Portifólio | Gabriel Lopes</title>
 </head>
 
-<body>
+<body id="body">
     <header>
         <div class="center">
             <div class="navegacao">
@@ -84,203 +84,213 @@
         </div>
     </header>
 
-    <main>
-        <section id="hero">
-            <div class="center">
+    <div tabindex="0" onclick="fechaSidebar()" id="desfoque">
+        <main>
+            <section id="hero">
+                <div class="center">
 
-                <div class="hero hidden">
-                    <div class="boxContent">
-                        <div class="bg-img">
-                            <div class="perfil">
-                                <img src="assets/img/gl-perfil.jpg" alt="Perfil Gabriel Lopes">
-                            </div>
-                        </div>
-
-                        <h1>Gabriel Lopes <span class="emoji">👋</span></h1>
-                        <p>Desenvolvedor Front-End</p>
-
-                        <div class="social">
-                            <a href="https://github.com/gabrielferreeira" target="_blank">Git Hub <i
-                                    class="bi bi-github"></i></a>
-                            <a href="https://www.linkedin.com/in/gabrielferreeira/" target="_blank">Linkedin <i
-                                    class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="sobre">
-            <div class="center">
-                <h2>Sobre</h2>
-
-                <div class="sobre">
-                    <div class="sobreLeft hidden">
-                        <div class="imgSobre">
-                            <img src="assets/img/gl-sobre.jpg" alt="Sobre Gabriel Lopes">
-                        </div>
-                    </div>
-
-                    <div class="sobreRight hidden">
-                        <div class="textSobre">
-                            <p>Olá, me chamo Gabriel Lopes! sou desenvolvedor <span>Front-End</span>
-                                como visto anteriormente. Atualmente estou passando por uma transição de carreira, onde,
-                                eu
-                                estava trabalhando como operador de caixa, porém, não estava muito satisfeito com a
-                                profissão.
-                                Em um determinado dia navegando pela internet que conheci um canal chamado "danki code",
-                                foi
-                                aí
-                                que comecei a assistir os videos do canal e gostei bastante do assunto e busquei se
-                                aprofundar
-                                mais e me identifiquei muito com a área da programação, principalmente, o
-                                front-end,
-                                mas nada que me impeça de buscar ter outros conhecimentos na área, pois, eu gosto
-                                bastante
-                                de
-                                aprender coisas novas.</p>
-                            <p class="tech"><span>Conhecimentos:</span> Html, css e javascript.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projetos">
-            <div class="center">
-
-                <h2>Projetos</h2>
-
-                <div class="projetos">
-                    <div class="boxProjetos hidden">
-                        <div class="leftContentProjetos">
-                            <p>Projeto To-Do-list: é um projeto para os usuáros salvarem as suas tarefas do dia a dia,
-                                com ele você pode salvar as tarefas, apagar as tarefas, marcar as tarefas como
-                                concluídas ou até mesmo editar as tarefas, porém, esta funcionalidade ainda não está
-                                funcionando, mas logo logo vai está disponível.</p>
-                            <p><span>Tecnológias:</span> Html, css, javascript</p>
-                        </div>
-
-                        <div class="rigthProjetos">
-
-                            <div class="imgProjeto" style="background-image: url('./assets/img/projeto1.png');">
-                                <div class="imgOverlay">
-                                    <div class="btnsProjeto">
-                                        <a href="https://github.com/gabrielferreeira/to-do-list"
-                                            target="_blank">Repositório
-                                            <span><i class="bi bi-github"></i></span></a>
-                                        <a href="https://to-do-list-orcin-psi.vercel.app/" target="_blank">Visitar site
-                                            <span><i class="bi bi-globe"></i></span></a>
-                                    </div>
+                    <div class="hero hidden">
+                        <div class="boxContent">
+                            <div class="bg-img">
+                                <div class="perfil">
+                                    <img src="assets/img/gl-perfil.jpg" alt="Perfil Gabriel Lopes">
                                 </div>
                             </div>
+
+                            <h1>Gabriel Lopes <span class="emoji">👋</span></h1>
+                            <p>Desenvolvedor Front-End</p>
+
+                            <div class="social">
+                                <a href="https://github.com/gabrielferreeira" target="_blank">Git Hub <i
+                                        class="bi bi-github"></i></a>
+                                <a href="https://www.linkedin.com/in/gabrielferreeira/" target="_blank">Linkedin <i
+                                        class="bi bi-linkedin"></i></a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="boxProjetos hidden">
-                        <div class="rigthProjetos">
+                </div>
+            </section>
 
-                            <div class="imgProjeto" style="background-image: url('./assets/img/projeto2.png');">
-                                <div class="imgOverlay">
-                                    <div class="btnsProjeto">
-                                        <a href="https://github.com/gabrielferreeira/cardapio-digital"
-                                            target="_blank">Repositório <span><i class="bi bi-github"></i></span></a>
-                                        <a href="#" target="_blank">Visitar site <span><i
-                                                    class="bi bi-globe"></i></span></a>
+            <section id="sobre">
+                <div class="center">
+                    <h2>Sobre</h2>
+
+                    <div class="sobre">
+                        <div class="sobreLeft hidden">
+                            <div class="imgSobre">
+                                <img src="assets/img/gl-sobre.jpg" alt="Sobre Gabriel Lopes">
+                            </div>
+                        </div>
+
+                        <div class="sobreRight hidden">
+                            <div class="textSobre">
+                                <p>Olá, me chamo Gabriel Lopes! sou desenvolvedor <span>Front-End</span>
+                                    como visto anteriormente. Atualmente estou passando por uma transição de carreira,
+                                    onde,
+                                    eu
+                                    estava trabalhando como operador de caixa, porém, não estava muito satisfeito com a
+                                    profissão.
+                                    Em um determinado dia navegando pela internet que conheci um canal chamado "danki
+                                    code",
+                                    foi
+                                    aí
+                                    que comecei a assistir os videos do canal e gostei bastante do assunto e busquei se
+                                    aprofundar
+                                    mais e me identifiquei muito com a área da programação, principalmente, o
+                                    front-end,
+                                    mas nada que me impeça de buscar ter outros conhecimentos na área, pois, eu gosto
+                                    bastante
+                                    de
+                                    aprender coisas novas.</p>
+                                <p class="tech"><span>Conhecimentos:</span> Html, css e javascript.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projetos">
+                <div class="center">
+
+                    <h2>Projetos</h2>
+
+                    <div class="projetos">
+                        <div class="boxProjetos hidden">
+                            <div class="leftContentProjetos">
+                                <p>Projeto To-Do-list: é um projeto para os usuáros salvarem as suas tarefas do dia a
+                                    dia,
+                                    com ele você pode salvar as tarefas, apagar as tarefas, marcar as tarefas como
+                                    concluídas ou até mesmo editar as tarefas, porém, esta funcionalidade ainda não está
+                                    funcionando, mas logo logo vai está disponível.</p>
+                                <p><span>Tecnológias:</span> Html, css, javascript</p>
+                            </div>
+
+                            <div class="rigthProjetos">
+
+                                <div class="imgProjeto" style="background-image: url('./assets/img/projeto1.png');">
+                                    <div class="imgOverlay">
+                                        <div class="btnsProjeto">
+                                            <a href="https://github.com/gabrielferreeira/to-do-list"
+                                                target="_blank">Repositório
+                                                <span><i class="bi bi-github"></i></span></a>
+                                            <a href="https://to-do-list-orcin-psi.vercel.app/" target="_blank">Visitar
+                                                site
+                                                <span><i class="bi bi-globe"></i></span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="leftContentProjetos">
-                            <p>Projeto Cardápio Digital: é um projeto em que os estabelecimentos podem usufruir para
-                                colocarem seus produtos para que os usários possam ver e fazerem seus pedidos, fugindo
-                                do cardápio tradicional feito com papel e plático, assim os estabelecimentos estão
-                                ajudando o meio ambiente também.</p>
-                            <p><span>Tecnológias:</span> Html, css, javascript</p>
+                        <div class="boxProjetos hidden">
+                            <div class="rigthProjetos">
+
+                                <div class="imgProjeto" style="background-image: url('./assets/img/projeto2.png');">
+                                    <div class="imgOverlay">
+                                        <div class="btnsProjeto">
+                                            <a href="https://github.com/gabrielferreeira/cardapio-digital"
+                                                target="_blank">Repositório <span><i
+                                                        class="bi bi-github"></i></span></a>
+                                            <a href="#" target="_blank">Visitar site <span><i
+                                                        class="bi bi-globe"></i></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="leftContentProjetos">
+                                <p>Projeto Cardápio Digital: é um projeto em que os estabelecimentos podem usufruir para
+                                    colocarem seus produtos para que os usários possam ver e fazerem seus pedidos,
+                                    fugindo
+                                    do cardápio tradicional feito com papel e plático, assim os estabelecimentos estão
+                                    ajudando o meio ambiente também.</p>
+                                <p><span>Tecnológias:</span> Html, css, javascript</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="boxProjetos hidden">
-                        <div class="leftContentProjetos">
-                            <p>Projeto Landing Page Barbearia: é um projeto no qual você pode saber mais sobre a
-                                empresa, sobre os cortes, valores e a localidade. Hoje em dia toda empresa precisa de um
-                                site e ainda mais se for um site simples e de fácil navegabilidade o que uma landing
-                                page é composta. Ela abrange várias funcionalidade, como por exemplo marcação de
-                                horário...</p>
-                            <p><span>Tecnológias:</span> Html, css, javascript</p>
-                        </div>
+                        <div class="boxProjetos hidden">
+                            <div class="leftContentProjetos">
+                                <p>Projeto Landing Page Barbearia: é um projeto no qual você pode saber mais sobre a
+                                    empresa, sobre os cortes, valores e a localidade. Hoje em dia toda empresa precisa
+                                    de um
+                                    site e ainda mais se for um site simples e de fácil navegabilidade o que uma landing
+                                    page é composta. Ela abrange várias funcionalidade, como por exemplo marcação de
+                                    horário...</p>
+                                <p><span>Tecnológias:</span> Html, css, javascript</p>
+                            </div>
 
-                        <div class="rigthProjetos">
+                            <div class="rigthProjetos">
 
-                            <div class="imgProjeto" style="background-image: url('./assets/img/projeto3.png');">
-                                <div class="imgOverlay">
-                                    <div class="btnsProjeto">
-                                        <a href="https://github.com/gabrielferreeira/landing-page-barbearia"
-                                            target="_blank">Repositório <span><i class="bi bi-github"></i></span></a>
-                                        <a href="#" target="_blank">Visitar site <span><i
-                                                    class="bi bi-globe"></i></span></a>
+                                <div class="imgProjeto" style="background-image: url('./assets/img/projeto3.png');">
+                                    <div class="imgOverlay">
+                                        <div class="btnsProjeto">
+                                            <a href="https://github.com/gabrielferreeira/landing-page-barbearia"
+                                                target="_blank">Repositório <span><i
+                                                        class="bi bi-github"></i></span></a>
+                                            <a href="#" target="_blank">Visitar site <span><i
+                                                        class="bi bi-globe"></i></span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer>
-        <section id="contato">
-            <div class="center">
+        <footer>
+            <section id="contato">
+                <div class="center">
 
-                <h2>Contatos</h2>
+                    <h2>Contatos</h2>
 
-                <div class="contato">
-                    <div class="formContato hidden">
-                        <form action="https://formsubmit.co/contatogabriieldev@gmail.com" method="POST">
-                            <div class="field">
-                                <label for="nome">Nome completo:</label>
-                                <input type="text" name="nome" placeholder="Nome Completo...">
-                            </div>
+                    <div class="contato">
+                        <div class="formContato hidden">
+                            <form action="https://formsubmit.co/contatogabriieldev@gmail.com" method="POST">
+                                <div class="field">
+                                    <label for="nome">Nome completo:</label>
+                                    <input type="text" name="nome" placeholder="Nome Completo...">
+                                </div>
 
-                            <div class="field">
-                                <label for="email">E-mail:</label>
-                                <input type="email" name="email" placeholder="Seu e-mail...">
-                            </div>
+                                <div class="field">
+                                    <label for="email">E-mail:</label>
+                                    <input type="email" name="email" placeholder="Seu e-mail...">
+                                </div>
 
-                            <div class="field">
-                                <label for="msg">Mensagem:</label>
-                                <textarea name="msg" cols="30" rows="10"
-                                    placeholder="Descreva sua mensagem..."></textarea>
-                            </div>
+                                <div class="field">
+                                    <label for="msg">Mensagem:</label>
+                                    <textarea name="msg" cols="30" rows="10"
+                                        placeholder="Descreva sua mensagem..."></textarea>
+                                </div>
 
-                            <div class="send">
-                                <input type="submit" value="Enviar">
-                            </div>
+                                <div class="send">
+                                    <input type="submit" value="Enviar">
+                                </div>
 
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
-                        </form>
-                    </div>
-                    <div class="socialContato">
-                        <a href="https://www.linkedin.com/in/gabrielferreeira/" target="_blank">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
+                            </form>
+                        </div>
+                        <div class="socialContato">
+                            <a href="https://www.linkedin.com/in/gabrielferreeira/" target="_blank">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
 
-                        <a href="https://github.com/gabrielferreeira" target="_blank">
-                            <i class="bi bi-github"></i>
-                        </a>
+                            <a href="https://github.com/gabrielferreeira" target="_blank">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <div class="copy">
-            <p>&copy; Gabriel <span>Lopes</span> - Todos os direitos reservados.</p>
-        </div>
-    </footer>
+            <div class="copy">
+                <p>&copy; Gabriel <span>Lopes</span> - Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
 </body>
 <script src="assets/js/scripts.js"></script>
 
