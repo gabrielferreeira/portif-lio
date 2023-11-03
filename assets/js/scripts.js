@@ -1,7 +1,7 @@
 const menuItens = document.querySelectorAll('.menu a[href^="#"]');
 const elements = document.querySelectorAll('.hidden');
-const over = document.getElementById('body');
 const desfoque = document.getElementById('desfoque');
+const bd = document.getElementById("body");
 
 const myObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -81,15 +81,21 @@ function smoothScrollTo(endX, endY, duration) {
 function abrirMenu() {
     document.getElementById("mobile").style.transform = "translateX(0)";
 
-    over.style.overflowY = "hidden"
     desfoque.style.filter = "blur(2px)";
+
+    if (abrirMenu) {
+        bd.style.overflowY = "hidden";
+    }
 }
 
 function fecharMenu() {
     document.getElementById("mobile").style.transform = "translateX(-100%)";
 
-    over.style.overflowY = "auto"
     desfoque.style.filter = "";
+
+    if (abrirMenu) {
+        bd.style.overflowY = "auto";
+    }
 }
 
 function fechaSidebar() {
