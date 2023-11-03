@@ -1,7 +1,8 @@
 const menuItens = document.querySelectorAll('.menu a[href^="#"]');
 const elements = document.querySelectorAll('.hidden');
 const desfoque = document.getElementById('desfoque');
-const bd = document.getElementById("body");
+const body = document.body;
+let isMenuOpen = false;
 
 const myObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -82,30 +83,26 @@ function abrirMenu() {
     document.getElementById("mobile").style.transform = "translateX(0)";
 
     desfoque.style.filter = "blur(2px)";
-
-    if (abrirMenu) {
-        bd.style.overflowY = "hidden";
-    }
+    body.style.overflow = "hidden";
+    isMenuOpen = true;
 }
 
 function fecharMenu() {
     document.getElementById("mobile").style.transform = "translateX(-100%)";
 
     desfoque.style.filter = "";
-
-    if (abrirMenu) {
-        bd.style.overflowY = "auto";
-    }
+    body.style.overflow = "auto";
+    isMenuOpen = false;
 }
 
 function fechaSidebar() {
-    if (abrirMenu) {
+    if (isMenuOpen) {
         fecharMenu();
     }
 }
 
 window.addEventListener('resize', function (e) {
-    if (this.window.innerWidth > 768 && abrirMenu) {
+    if (this.window.innerWidth > 768 && isMenuOpen) {
         fecharMenu();
     }
 });
