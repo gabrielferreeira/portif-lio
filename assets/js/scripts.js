@@ -1,50 +1,77 @@
 const menuItens = document.querySelectorAll('.menu a[href^="#"]');
-const elements = document.querySelectorAll('.hidden');
-const desfoque = document.getElementById('desfoque');
+const elements = document.querySelectorAll(".hidden");
+const iconMobile = document.querySelector(".iconMobile");
+const mobile = document.querySelector(".mobile");
 const body = document.body;
+const open = "open";
 let isMenuOpen = false;
 
+iconMobile.addEventListener("click", function () {
+  toggleMenu();
+});
+
 const myObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    })
-})
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+});
 
-elements.forEach((el) => myObserver.observe(el))
+elements.forEach((el) => myObserver.observe(el));
 
-menuItens.forEach(item => {
-    item.addEventListener('click', scrollSmooth);
-})
+menuItens.forEach((item) => {
+  item.addEventListener("click", function (event) {
+    scrollSmooth(event);
+    toggleMenu();
+  });
+});
 
-function scrollToHref(element) {
-    const id = element.getAttribute('href');
-    return document.querySelector(id).offsetTop;
+function toggleMenu() {
+  if (mobile.classList.contains(open)) {
+    mobile.classList.remove(open);
+    updateIcon(false);
+  } else {
+    mobile.classList.add(open);
+    updateIcon(true);
+  }
 }
 
-const evt = new Event("scrollExit");
+function updateIcon(isMenuOpen) {
+  const bars = document.querySelector(".bi.bars");
+  const exit = document.querySelector(".bi.exit");
+
+  if (isMenuOpen) {
+    bars.style.display = "none";
+    exit.style.display = "block";
+  } else {
+    bars.style.display = "block";
+    exit.style.display = "none";
+  }
+}
+
+function scrollToHref(element) {
+  const id = element.getAttribute("href");
+  return document.querySelector(id).offsetTop;
+}
 
 function scrollSmooth(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const section = scrollToHref(event.target) - 30;
+  const section = scrollToHref(event.target) - 30;
 
-    scrollSmoothPosition(section);
-
+  scrollSmoothPosition(section);
 }
 
 function scrollSmoothPosition(section) {
-    // window.scroll({
-    //     top: section,
-    //     behavior: "smooth",
-    // });
+  // window.scroll({
+  //     top: section,
+  //     behavior: "smooth",
+  // });
 
-    document.dispatchEvent(evt);
-
-    smoothScrollTo(0, section);
+  smoothScrollTo(0, section);
 }
 
 /**
@@ -54,57 +81,47 @@ function scrollSmoothPosition(section) {
  * @param {int} duration: animation duration in ms
  */
 function smoothScrollTo(endX, endY, duration) {
-    const startX = window.scrollX || window.pageXOffset;
-    const startY = window.scrollY || window.pageYOffset;
-    const distanceX = endX - startX;
-    const distanceY = endY - startY;
-    const startTime = new Date().getTime();
+  const startX = window.scrollX || window.pageXOffset;
+  const startY = window.scrollY || window.pageYOffset;
+  const distanceX = endX - startX;
+  const distanceY = endY - startY;
+  const startTime = new Date().getTime();
 
-    duration = typeof duration !== 'undefined' ? duration : 400;
+  duration = typeof duration !== "undefined" ? duration : 400;
 
-    // Easing function
-    const easeInOutQuart = (time, from, distance, duration) => {
-        if ((time /= duration / 2) < 1) return distance / 2 * time * time * time * time + from;
-        return -distance / 2 * ((time -= 2) * time * time * time - 2) + from;
-    };
+  // Easing function
+  const easeInOutQuart = (time, from, distance, duration) => {
+    if ((time /= duration / 2) < 1)
+      return (distance / 2) * time * time * time * time + from;
+    return (-distance / 2) * ((time -= 2) * time * time * time - 2) + from;
+  };
 
-    const timer = setInterval(() => {
-        const time = new Date().getTime() - startTime;
-        const newX = easeInOutQuart(time, startX, distanceX, duration);
-        const newY = easeInOutQuart(time, startY, distanceY, duration);
-        if (time >= duration) {
-            clearInterval(timer);
-        }
-        window.scroll(newX, newY);
-    }, 1000 / 60); // 60 fps
-};
-
-function abrirMenu() {
-    document.getElementById("mobile").style.transform = "translateX(0)";
-
-    desfoque.style.filter = "blur(2px)";
-    body.style.overflow = "hidden";
-    isMenuOpen = true;
-}
-
-function fecharMenu() {
-    document.getElementById("mobile").style.transform = "translateX(-100%)";
-
-    desfoque.style.filter = "";
-    body.style.overflow = "auto";
-    isMenuOpen = false;
-}
-
-function fechaSidebar() {
-    if (isMenuOpen) {
-        fecharMenu();
+  const timer = setInterval(() => {
+    const time = new Date().getTime() - startTime;
+    const newX = easeInOutQuart(time, startX, distanceX, duration);
+    const newY = easeInOutQuart(time, startY, distanceY, duration);
+    if (time >= duration) {
+      clearInterval(timer);
     }
+    window.scroll(newX, newY);
+  }, 1000 / 60); // 60 fps
 }
 
-window.addEventListener('resize', function (e) {
-    if (this.window.innerWidth > 768 && isMenuOpen) {
-        fecharMenu();
-    }
+const projetosItens = document.querySelectorAll(".box-projetos-itens");
+projetosItens.forEach((item, index) => {
+  if (index >= 3) {
+    item.style.display = "none";
+  }
 });
 
-document.addEventListener("scrollExit", fecharMenu);
+// Adicionando lógica para carregar mais projetos
+const verMaisButton = document.getElementById("ver-mais");
+verMaisButton.addEventListener("click", function () {
+  projetosItens.forEach((item, index) => {
+    if (index >= 3 && index < 6) {
+      item.style.display = "block";
+    }
+  });
+
+  verMaisButton.style.display = "none";
+});

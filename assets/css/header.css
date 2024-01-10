@@ -1,127 +1,135 @@
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: var(--colorDark2);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: var(--colorDark2);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 2;
 }
 
 .navegacao {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 60px;
-    z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  z-index: 3;
 }
 
 .logo {
-    color: var(--colorWhite);
-    font-size: 1.5rem;
-    font-weight: 700;
-    cursor: pointer;
+  color: var(--colorWhite);
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 5;
 }
 
 .logo span {
-    color: var(--colorBlue);
+  color: var(--colorBlue);
 }
 
 .menuLinks ul {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .menuLinks ul li {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .menuLinks ul li a {
-    color: var(--colorBlue);
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: .3s;
-    cursor: pointer;
+  color: var(--colorBlue);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .menuLinks ul li a:hover {
-    color: var(--colorWhite);
+  color: var(--colorWhite);
 }
 
 .iconMobile {
-    display: none;
-    z-index: 4;
+  display: none;
+  z-index: 4;
 }
 
 .iconMobile i {
-    color: var(--colorBlue);
-    font-size: 1.7rem;
-    transition: .3s;
-    cursor: pointer;
+  color: var(--colorBlue);
+  font-size: 1.7rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.iconMobile i.exit {
+  display: none;
 }
 
 .iconMobile i:hover {
-    color: var(--colorBlue);
+  color: var(--colorBlue);
 }
 
 .mobile {
-    display: none;
+  display: none;
 }
 
+.mobile.open {
+  transform: translateY(0);
+}
 
-@media (max-width:768px) {
-    .iconMobile {
-        display: block;
-    }
+@media (max-width: 768px) {
+  .iconMobile {
+    display: block;
+  }
 
-    .menuLinks {
-        display: none;
-    }
+  .menuLinks {
+    display: none;
+  }
 
-    .mobile {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 300px;
-        transform: translateX(-100%);
-        height: 100vh;
-        z-index: 1000;
-        background: var(--colorDark2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        transition: .3s;
-    }
+  .mobile {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    height: 400px;
+    background: var(--colorDark2);
+    border-top: 1px solid var(--colorBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s;
+  }
 
-    .mobile .iconMobile i {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        font-size: 1.7rem;
-        cursor: pointer;
-    }
+  .mobile .iconMobile i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
 
-    .mobile nav ul li {
-        margin-bottom: 2rem;
-    }
+  .mobile nav ul li {
+    margin-bottom: 2rem;
+  }
 
-    .mobile nav ul li a {
-        color: var(--colorBlue);
-        font-size: 1.3rem;
-        font-weight: 500;
-        transition: .3s;
-        cursor: pointer;
-    }
+  .mobile nav ul li a {
+    color: var(--colorBlue);
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+  }
 
-    .mobile nav ul li a:hover {
-        color: var(--colorWhite);
-    }
+  .mobile nav ul li a:hover {
+    color: var(--colorWhite);
+  }
 }
 
 @media (max-width: 305px) {
-    .mobile {
-        width: 100%;
-    }
+  .mobile {
+    width: 100%;
+  }
 }
