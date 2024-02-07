@@ -1,0 +1,191 @@
+.main-content #contacts {
+  width: 100%;
+}
+
+.main-content #contacts .contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-content #contacts .contacts .form-contact {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.main-content #contacts .contacts .form-contact form .input-control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.main-content
+  #contacts
+  .contacts
+  .form-contact
+  form
+  .input-control:first-child {
+  margin-top: 0;
+}
+
+.main-content #contacts .contacts .form-contact form .input-control input,
+.main-content #contacts .contacts .form-contact form .input-control textarea {
+  width: 100%;
+  padding: 12px 8px;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: var(--colorBlack);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.main-content
+  #contacts
+  .contacts
+  .form-contact
+  form
+  .input-control
+  input::placeholder,
+.main-content
+  #contacts
+  .contacts
+  .form-contact
+  form
+  .input-control
+  textarea::placeholder {
+  color: var(--colorGray);
+}
+
+.main-content #contacts .contacts .form-contact form .input-control .msg {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--colorBlack);
+  padding-left: 1px;
+  visibility: hidden;
+}
+
+.main-content #contacts .contacts .form-contact form button {
+  width: 100%;
+  padding: 6px 0;
+  border-radius: 6px;
+  background: var(--linearGradientOne);
+  color: var(--colorBlack);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.main-content #contacts .contacts .form-contact form button:hover {
+  transform: scale(0.9);
+}
+
+.main-content #contacts .contacts .other-contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-content #contacts .contacts .other-contact .social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-content #contacts .contacts .other-contact .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--linearGradientOne);
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.main-content #contacts .contacts .other-contact .social a:hover {
+  transform: scale(0.9);
+}
+
+.main-content #contacts .contacts .other-contact .social a i {
+  color: var(--colorBlack);
+  font-size: 1.5rem;
+}
+
+.main-content #contacts .contacts .other-contact .curriculum a {
+  background: var(--linearGradientOne);
+  color: var(--colorBlack);
+  padding: 6px 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.main-content #contacts .contacts .other-contact .curriculum a:hover {
+  transform: scale(0.9);
+}
+
+/* VALIDAÇÕES */
+.main-content #contacts .contacts .form-contact form .input-control.error input,
+.main-content
+  #contacts
+  .contacts
+  .form-contact
+  form
+  .input-control.error
+  textarea {
+  border: 2px solid var(--colorRed);
+}
+
+.main-content #contacts .contacts .form-contact form .input-control.error .msg {
+  color: var(--colorRed);
+  visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content #contacts .contacts {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.dark .main-content #contacts .contacts .form-contact {
+  background-color: var(--colorBlack);
+}
+
+.dark .main-content #contacts .contacts .form-contact form .input-control input,
+.dark
+  .main-content
+  #contacts
+  .contacts
+  .form-contact
+  form
+  .input-control
+  textarea {
+  color: var(--colorWhite);
+  background-color: var(--colorBlackTwo);
+}
+
+.dark .main-content #contacts .contacts .form-contact form .input-control .msg {
+  color: var(--colorWhite);
+}
+
+.dark
+  .main-content
+  #contacts
+  .contacts
+  .form-contact
+  form
+  .input-control.error
+  .msg {
+  color: var(--colorRed);
+}

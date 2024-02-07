@@ -1,0 +1,117 @@
+.courses {
+  display: flex;
+  flex-direction: column;
+}
+
+.courses .filter-select {
+  display: flex;
+  justify-content: right;
+}
+
+.courses .filter-select select {
+  padding: 6px 0;
+  border: 1px solid var(--colorBlack);
+  border-radius: 6px;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.courses .courses-items {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  opacity: 0.9;
+}
+
+.courses .courses-items:hover {
+  opacity: 1;
+}
+
+.courses .courses-items .img-course {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  background: var(--linearGradientOne);
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.courses .courses-items .img-course figure img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.courses .courses-items .content-course {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.courses .courses-items .content-course h2 {
+  color: var(--colorBlack);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.courses .courses-items .content-course p {
+  color: var(--colorBlack);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.courses .courses-items .content-course span {
+  color: var(--colorBlack);
+  font-size: 0.9rem;
+}
+
+.courses .courses-items .content-course .link-certificate {
+  color: var(--colorBlue);
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.courses .courses-items .content-course .link-certificate-conteiner {
+  position: relative;
+}
+
+.courses
+  .courses-items
+  .content-course
+  .link-certificate-conteiner
+  .link-certificate {
+  pointer-events: auto;
+}
+
+@media screen and (max-width: 650px) {
+  .courses .filter-select select,
+  .courses .filter-select select option {
+    font-size: 0.8rem;
+  }
+
+  .courses .courses-items {
+    flex-direction: column;
+  }
+}
+
+.dark .courses .filter-select select {
+  border-color: var(--colorWhite);
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+}
+
+.dark .courses .courses-items {
+  background-color: var(--colorBlack);
+}
+
+.dark .courses .courses-items .content-course h2,
+.dark .courses .courses-items .content-course p,
+.dark .courses .courses-items .content-course span {
+  color: var(--colorWhite);
+}

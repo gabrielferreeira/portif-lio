@@ -1,0 +1,147 @@
+.content .main-content #projects .projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.content .main-content #projects .projects .projetcs-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.content .main-content #projects .projects .projetcs-items:hover {
+  opacity: 0.9;
+  border: 1px solid var(--colorBlack);
+}
+
+.content .main-content #projects .projects .projetcs-items h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--colorBlack);
+}
+
+.content .main-content #projects .projects .projetcs-items .projects-img {
+  margin-top: 10px;
+}
+
+.content
+  .main-content
+  #projects
+  .projects
+  .projetcs-items
+  .projects-img
+  figure
+  img {
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.content
+  .main-content
+  #projects
+  .projects
+  .projetcs-items
+  .projects-img
+  figure
+  img:hover {
+  transform: scale(0.97);
+}
+
+.content .main-content #projects .projects .projetcs-items p {
+  height: 120px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--colorBlack);
+}
+
+.content .main-content #projects .projects .projetcs-items .tech {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.content .main-content #projects .projects .projetcs-items .tech figure img {
+  object-fit: cover;
+}
+
+.content .main-content #projects .projects .projetcs-items .action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.content .main-content #projects .projects .projetcs-items .action-btn a {
+  background: var(--linearGradientOne);
+  color: var(--colorBlack);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 6px 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.content .main-content #projects .projects .projetcs-items .action-btn a:hover {
+  transform: scale(0.9);
+}
+
+.content .main-content #projects .view-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.content .main-content #projects .view-plus .plus-btn,
+.content .main-content #projects .view-plus .minus-btn {
+  background: var(--linearGradientOne);
+  padding: 6px 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--colorBlack);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.content .main-content #projects .view-plus .plus-btn:hover,
+.content .main-content #projects .view-plus .minus-btn:hover {
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 860px) {
+  .content .main-content #projects .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .content .main-content #projects .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.dark .content .main-content #projects .projects .projetcs-items {
+  background-color: var(--colorBlackThree);
+}
+
+.dark .content .main-content #projects .projects .projetcs-items:hover {
+  border: 1px solid var(--colorWhite);
+}
+
+.dark .content .main-content #projects .projects .projetcs-items h2,
+.dark .content .main-content #projects .projects .projetcs-items p {
+  color: var(--colorWhite);
+}

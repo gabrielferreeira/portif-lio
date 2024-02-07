@@ -1,0 +1,118 @@
+.perfil {
+  position: relative;
+  background-color: var(--colorWhite);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 6rem;
+}
+
+.perfil .banner-perfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfil .banner-perfil .img-perfil {
+  position: absolute;
+  top: -90px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--linearGradientOne);
+}
+
+.perfil .banner-perfil .img-perfil figure img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 4px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.perfil .banner-perfil .img-perfil figure img:hover {
+  transform: scale(1.1);
+}
+
+.perfil .banner-perfil .perfil-content {
+  margin-top: 3.2rem;
+}
+
+.perfil .banner-perfil .perfil-content h1,
+.perfil .banner-perfil .perfil-content h2 {
+  text-align: center;
+}
+
+.perfil .banner-perfil .perfil-content h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--colorBlack);
+}
+
+.perfil .banner-perfil .perfil-content h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--colorBlack);
+  line-height: 15px;
+}
+
+.perfil .banner-perfil .perfil-content h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--colorBlack);
+}
+
+.perfil .banner-perfil .perfil-content h3 span {
+  font-weight: 600;
+}
+
+.perfil .banner-perfil .perfil-content .location {
+  margin-top: 1rem;
+}
+
+.perfil .banner-perfil .perfil-content .location h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--colorBlack);
+}
+
+.perfil .banner-perfil .perfil-content .btn-perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.perfil .banner-perfil .perfil-content .btn-perfil a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  background: var(--linearGradientOne);
+  color: var(--colorBlack);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 6px 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.perfil .banner-perfil .perfil-content .btn-perfil a:hover {
+  transform: scale(0.9);
+}
+
+.dark .perfil {
+  background-color: var(--colorBlackThree);
+}
+
+.dark .perfil .banner-perfil .perfil-content h1,
+.dark .perfil .banner-perfil .perfil-content h2,
+.dark .perfil .banner-perfil .perfil-content h3,
+.dark .perfil .banner-perfil .perfil-content .location h4 {
+  color: var(--colorWhite);
+}

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Olá, venho através deste portifólio mostrar um pouco das minhas habilidades, conhecimentos e um pouco sobre mim."
+      content="Olá, venho através deste portifólio mostrar um pouco das minhas habilidades, conhecimentos, projetos, cursos e um pouco sobre mim."
     />
     <meta
       name="keywords"
-      content="portifólio, habilidades, skills, sobre mim, conhecimentos, html, css, javascript, skills, projetos, programação"
+      content="portifólio, habilidades, skills, sobre mim, conhecimentos, html, css, javascript, projetos, programação, cursos"
     />
 
     <link rel="stylesheet" href="assets/css/all.css" />
@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -35,354 +35,617 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
 
+    <!-- BIBLIOTECA DE ANIMAÇÕES -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <title>Portifólio | Gabriel Lopes</title>
   </head>
 
   <body>
-    <header>
-      <div class="center">
-        <div class="navegacao">
-          <a href="index.html" class="logo"
-            >Gabriel <span>Lopes <i class="bi bi-code-slash"></i></span
-          ></a>
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <i class="bi bi-code-slash"></i>
+          GL
+        </a>
 
-          <nav class="menuLinks menu">
-            <ul>
-              <li>
-                <a href="#hero">Início</a>
-              </li>
-
-              <li>
-                <a href="#sobre">Sobre</a>
-              </li>
-
-              <li>
-                <a href="#projetos">Projetos</a>
-              </li>
-
-              <li>
-                <a href="#contato">Contato</a>
-              </li>
-            </ul>
-          </nav>
-
-          <div class="iconMobile">
-            <i class="bi bi-list bars"></i>
-            <i class="bi bi-x-lg exit"></i>
-          </div>
-
-          <div class="mobile" id="mobile">
-            <nav class="menu">
-              <ul>
-                <li>
-                  <a href="#hero">Início</a>
-                </li>
-
-                <li>
-                  <a href="#sobre">Sobre</a>
-                </li>
-
-                <li>
-                  <a href="#projetos">Projetos</a>
-                </li>
-
-                <li>
-                  <a href="#contato">Contato</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+        <div class="theme">
+          <input type="checkbox" name="change-theme" id="change-theme" />
+          <label for="change-theme">
+            <i title="Modo escuro" class="bi bi-moon"></i>
+            <i title="Modo claro" class="bi bi-brightness-high"></i>
+          </label>
         </div>
-      </div>
+      </nav>
     </header>
 
-    <main>
-      <section id="hero">
-        <div class="center">
-          <div class="hero hidden">
-            <div class="boxContent">
-              <div class="bg-img">
-                <div class="perfil">
-                  <img
-                    src="assets/img/gl-perfil.jpg"
-                    alt="Perfil Gabriel Lopes"
-                  />
-                </div>
+    <main class="main">
+      <div class="conteiner">
+        <div class="perfil animate__animated animate__zoomIn">
+          <div class="banner-perfil">
+            <div class="img-perfil">
+              <figure>
+                <img
+                  title="Imagem Gabriel Lopes"
+                  src="assets/img/gl-perfil.jpg"
+                  alt="img perfil Gabriel Lopes"
+                  loading="eager"
+                />
+              </figure>
+            </div>
+
+            <div class="perfil-content">
+              <h1>Gabriel Lopes</h1>
+              <h2>Desenvolvedor Front-end.</h2>
+              <h3><span>Tecnológias: </span>HTML | CSS | JS | GIT | GITHUB</h3>
+
+              <div class="location">
+                <h4><i class="bi bi-geo-alt"></i> Fortaleza CE</h4>
               </div>
 
-              <h1>Gabriel Lopes <span class="emoji">👋</span></h1>
-              <p>Desenvolvedor Front-End</p>
-
-              <div class="social">
+              <div class="btn-perfil">
                 <a
                   href="https://www.linkedin.com/in/gabrielferreeira/"
+                  title="Linkedin"
                   target="_blank"
-                  >Linkedin <i class="bi bi-linkedin"></i
-                ></a>
-                <a href="https://github.com/gabrielferreeira" target="_blank"
-                  >Git Hub <i class="bi bi-github"></i
-                ></a>
+                >
+                  <i class="bi bi-linkedin"></i>
+                  Linkedin
+                </a>
+                <a
+                  href="https://github.com/gabrielferreeira"
+                  title="Github"
+                  target="_blank"
+                >
+                  <i class="bi bi-github"></i>
+                  Github
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <section id="sobre">
-        <div class="center">
-          <h2>Sobre</h2>
+        <div class="content">
+          <header class="header-btns">
+            <button title="Projetos" class="actions active" data-id="projects">
+              Projetos
+            </button>
+            <button title="Cursos" class="actions" data-id="courses">
+              Cursos
+            </button>
+            <button title="Sobre" class="actions" data-id="about">Sobre</button>
+            <button title="Contatos" class="actions" data-id="contacts">
+              Contatos
+            </button>
+          </header>
 
-          <div class="sobre">
-            <div class="sobreLeft hidden">
-              <div class="imgSobre">
-                <img src="assets/img/gl-sobre.jpg" alt="Sobre Gabriel Lopes" />
+          <main class="main-content">
+            <div id="projects" class="items">
+              <div class="projects">
+                <div class="projetcs-items">
+                  <h2>Lista de tarefas</h2>
+                  <div class="projects-img">
+                    <figure>
+                      <img
+                        src="assets/img/lista-de-tarefas.jpeg"
+                        alt="imagem app lista de tarefas"
+                        title="imagem app lista de tarefas"
+                        loading="eager"
+                      />
+                    </figure>
+                  </div>
+                  <p>
+                    O app lista de tarefas é relativamente simples, mas nele
+                    você encontra-rá algumas funcionalidades básicas como:
+                    adicionar, marcar como concluída e editar. foi utilizado o
+                    localstorage para armazenar as tarefas.
+                  </p>
+                  <div class="tech">
+                    <figure>
+                      <img
+                        src="assets/img/html.png"
+                        alt="Html5"
+                        title="Html5"
+                      />
+                    </figure>
+                    <figure>
+                      <img src="assets/img/css.png" alt="Css3" title="Css3" />
+                    </figure>
+                    <figure>
+                      <img
+                        src="assets/img/js.png"
+                        alt="Javascript"
+                        title="Javascript"
+                      />
+                    </figure>
+                  </div>
+                  <div class="action-btn">
+                    <a
+                      href="https://task-list-sandy.vercel.app/"
+                      title="Site"
+                      target="_blank"
+                      ><i class="bi bi-globe-americas"></i> Site</a
+                    >
+                    <a
+                      href="https://github.com/gabrielferreeira/task-list"
+                      title="Repositório"
+                      target="_blank"
+                      ><i class="bi bi-github"></i> Repositório</a
+                    >
+                  </div>
+                </div>
+
+                <div class="projetcs-items">
+                  <h2>Formulário de cadastro</h2>
+                  <div class="projects-img">
+                    <figure>
+                      <img
+                        src="assets/img/form-cadastro.jpeg"
+                        alt="imagem formulário de cadastro"
+                        title="imagem formulário de cadastro"
+                        loading="eager"
+                      />
+                    </figure>
+                  </div>
+                  <p>
+                    Este projeto é um formulário de cadastro simples, foi
+                    desenvolvido utilizando as tecnologias básicas da web. O
+                    principal destaque é a implementação de validações de campos
+                    no lado front-end, proporcionando uma experiência iterativa
+                    para os usuários.
+                  </p>
+                  <div class="tech">
+                    <figure>
+                      <img
+                        src="assets/img/html.png"
+                        alt="Html5"
+                        title="Html5"
+                      />
+                    </figure>
+                    <figure>
+                      <img src="assets/img/css.png" alt="Css3" title="Css3" />
+                    </figure>
+                    <figure>
+                      <img
+                        src="assets/img/js.png"
+                        alt="Javascript"
+                        title="Javascript"
+                      />
+                    </figure>
+                  </div>
+                  <div class="action-btn">
+                    <a
+                      href="https://form-cadastro-iota.vercel.app/"
+                      title="Site"
+                      target="_blank"
+                      ><i class="bi bi-globe-americas"></i> Site</a
+                    >
+                    <a
+                      href="https://github.com/gabrielferreeira/form-cadastro"
+                      title="Repositório"
+                      target="_blank"
+                    >
+                      <i class="bi bi-github"></i> Repositório</a
+                    >
+                  </div>
+                </div>
+
+                <div class="projetcs-items">
+                  <h2>Cardápio digital</h2>
+                  <div class="projects-img">
+                    <figure>
+                      <img
+                        src="assets/img/cardapio-digital.jpeg"
+                        alt="imagem cardápio digital"
+                        title="imagem cardápio digital"
+                        loading="eager"
+                      />
+                    </figure>
+                  </div>
+                  <p>
+                    Este projeto também foi usada as tecnologias básicas da web.
+                    O principal foco do projeto é proporcionar os usuários
+                    experiências dinâmicas, pois nele, é permitido a navegações
+                    por categorias de produtos e o usuário consegue pesquisar
+                    por um produto específico.
+                  </p>
+                  <div class="tech">
+                    <figure>
+                      <img
+                        src="assets/img/html.png"
+                        alt="Html5"
+                        title="Html5"
+                      />
+                    </figure>
+                    <figure>
+                      <img src="assets/img/css.png" alt="Css3" title="Css3" />
+                    </figure>
+                    <figure>
+                      <img
+                        src="assets/img/js.png"
+                        alt="Javascript"
+                        title="Javascript"
+                      />
+                    </figure>
+                  </div>
+                  <div class="action-btn">
+                    <a href="#" title="Site" target="_blank"
+                      ><i class="bi bi-globe-americas"></i> Site</a
+                    >
+                    <a
+                      href="https://github.com/gabrielferreeira/cardapio-digital"
+                      title="Repositório"
+                      target="_blank"
+                      ><i class="bi bi-github"></i> Repositório</a
+                    >
+                  </div>
+                </div>
+
+                <div class="projetcs-items" style="height: 300px">
+                  <span
+                    style="
+                      display: grid;
+                      place-items: center;
+                      min-height: 300px;
+                      color: white;
+                      text-transform: uppercase;
+                      font-size: 2rem;
+                      transform: rotate(-55deg);
+                    "
+                    >Em breve</span
+                  >
+                </div>
+              </div>
+
+              <div class="view-plus">
+                <button
+                  id="plus-btn"
+                  class="plus-btn"
+                  title="Visualizar mais projetos"
+                >
+                  Ver mais <i class="bi bi-chevron-down"></i>
+                </button>
+
+                <button
+                  id="minus-btn"
+                  class="minus-btn"
+                  title="Visualizar menos projetos"
+                >
+                  Ver menos <i class="bi bi-chevron-up"></i>
+                </button>
               </div>
             </div>
+            <div id="courses" class="items">
+              <div class="courses">
+                <div class="filter-select">
+                  <select
+                    name="courses-filter"
+                    id="courses-filter"
+                    onchange="filterCourses()"
+                  >
+                    <option value="select" selected>Todos</option>
+                    <option value="em andamento">Em andamento</option>
+                    <option value="concluído">Concluído</option>
+                  </select>
+                </div>
+                <div
+                  class="courses-items animate__animated animate__slideInLeft"
+                  data-status="em andamento"
+                >
+                  <div class="img-course">
+                    <figure>
+                      <img
+                        src="assets/img/fullstack.png"
+                        alt="Curso de javascript e typescript avançado udemy"
+                        title="Curso de javascript e typescript avançado udemy"
+                      />
+                    </figure>
+                  </div>
+                  <div class="content-course">
+                    <h2>Curso de javascript e typescript avançado - Udemy</h2>
+                    <p>
+                      Este curso consiste em ensinar javascript e typescript
+                      desde seus fundamentos até os conceitos mais avançados. Na
+                      parte do front-end você aprende a dominar o javascript
+                      moderno(ES6+) e bibliotecas como "React", juntamente com
+                      os conceitos de React Hooks e Redux. Já no back-and você
+                      aprende a utlizar node.js, express e até mesmo banco de
+                      dados como o MySql e o mongoDB etc...
+                    </p>
+                    <span class="workload"
+                      ><strong>Carga horária: </strong>146 horas.</span
+                    >
+                    <div class="link-certificate-conteiner">
+                      <a
+                        title="Certificado"
+                        href="#"
+                        target="_blank"
+                        class="link-certificate"
+                        ><i class="bi bi-link-45deg"></i> Certificado</a
+                      >
+                    </div>
+                  </div>
+                </div>
 
-            <div class="sobreRight hidden">
-              <div class="textSobre">
-                <p>
-                  Olá, me chamo Gabriel Lopes! sou desenvolvedor
-                  <span>Front-End</span> como visto anteriormente. Atualmente
-                  estou passando por uma transição de carreira, onde, eu estava
-                  trabalhando como operador de caixa, porém, não estava muito
-                  satisfeito com a profissão. Em um determinado dia navegando
-                  pela internet que conheci um canal chamado "danki code", foi
-                  aí que comecei a assistir os videos do canal e gostei bastante
-                  do assunto e busquei se aprofundar mais e me identifiquei
-                  muito com a área da programação, principalmente, o front-end,
-                  mas nada que me impeça de buscar ter outros conhecimentos na
-                  área, pois, eu gosto bastante de aprender coisas novas.
-                </p>
-                <p class="tech">
-                  <span>Conhecimentos:</span> Html, css, javascript, git e
-                  github.
-                </p>
+                <div
+                  class="courses-items animate__animated animate__slideInRight"
+                  data-status="em andamento"
+                >
+                  <div class="img-course">
+                    <figure>
+                      <img
+                        src="assets/img/front-end.png"
+                        alt="Curso de formação front-end udemy"
+                        title="Curso de formação front-end udemy"
+                      />
+                    </figure>
+                  </div>
+                  <div class="content-course">
+                    <h2>Curso de formação front-end - Udemy</h2>
+                    <p>
+                      O curso formação front-end é voltado para aprender sobre
+                      HTML, CSS, JAVASCRIPT, TYPESCRIPT e REACT, mas com foco no
+                      lado do front-end. Neste curso você aprende como criar e
+                      elaborar projetos desde o mais simples até o mais
+                      avançado, como usar o flexbox, conceitos de responsividade
+                      para que os projetos fiquem adaptados para todos os
+                      disposivitos etc...
+                    </p>
+                    <span class="workload"
+                      ><strong>Carga horária: </strong>50 horas.</span
+                    >
+                    <div class="link-certificate-conteiner">
+                      <a
+                        title="Certificado"
+                        href="#"
+                        target="_blank"
+                        class="link-certificate"
+                        ><i class="bi bi-link-45deg"></i> Certificado</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="courses-items animate__animated animate__slideInLeft"
+                  data-status="concluído"
+                >
+                  <div class="img-course">
+                    <figure>
+                      <img
+                        src="assets/img/devstart.png"
+                        alt="Curso fluig dev start totvs"
+                        title="Curso fluig dev start totvs"
+                      />
+                    </figure>
+                  </div>
+                  <div class="content-course">
+                    <h2>Curso fluig dev start - Totvs</h2>
+                    <p>
+                      Este curso é introdutório ao desenvolvimento web, nele
+                      você aprende os coceitos básicos da web, sobre
+                      navegadores, console... O curso consiste também em
+                      aprender o básico de HTML, CSS, JAVASCRIPT e para que
+                      serve essas 3 tecnologias, como utilizar o bootstrap e o
+                      jquery de forma básica.
+                    </p>
+                    <span class="workload"
+                      ><strong>Carga horária: </strong>6 horas.</span
+                    >
+                    <div class="link-certificate-conteiner">
+                      <a
+                        title="Certificado"
+                        target="_blank"
+                        href="https://academy.fluig.com/pluginfile.php/1/tool_certificate/issues/1705328129/6768859322GL.pdf"
+                        class="link-certificate"
+                        ><i class="bi bi-link-45deg"></i> Certificado</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="courses-items animate__animated animate__slideInRight"
+                  data-status="em andamento"
+                >
+                  <div class="img-course">
+                    <figure>
+                      <img
+                        src="assets/img/algoritmos.png"
+                        alt="Curso lógica de programação e algoritmos curso em vídeo"
+                        title="Curso lógica de programação e algoritmos curso em vídeo"
+                      />
+                    </figure>
+                  </div>
+                  <div class="content-course">
+                    <h2>
+                      Curso lógica de programação e algoritmos - Curso em vídeo
+                    </h2>
+                    <p>
+                      O curso de Lógica de Programação e Algoritmos oferecido
+                      pelo Curso em Vídeo é uma jornada transformadora para quem
+                      busca entender os fundamentos essenciais por trás da
+                      ciência da computação. Ao longo do curso, aprendemos a
+                      pensar de forma estruturada e a desenvolver algoritmos
+                      eficientes para solucionar problemas reais.
+                    </p>
+                    <span class="workload"
+                      ><strong>Carga horária: </strong>40 horas.</span
+                    >
+                    <div class="link-certificate-conteiner">
+                      <a
+                        title="Certificado"
+                        href="#"
+                        target="_blank"
+                        class="link-certificate"
+                        ><i class="bi bi-link-45deg"></i> Certificado</a
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+            <div id="about" class="items">
+              <div class="about">
+                <div class="about-img animate__animated animate__slideInLeft">
+                  <figure>
+                    <img
+                      title="Imagem Gabriel Lopes"
+                      src="assets/img/img-gl-sobre.jpg"
+                      alt="imagem Gabriel Lopes"
+                      loading="eager"
+                    />
+                  </figure>
+                </div>
+                <div class="about-text animate__animated animate__slideInRight">
+                  <p>
+                    Olá! Me chamo Gabriel Lopes e sou estudante de TI. Minha
+                    trajetória na área é marcada por uma transição de carreira.
+                    Atualmente, cursando Análise e desenvolvimento de sistemaas,
+                    estou muito empolgado em deixar minha experiência como
+                    operador de caixa para me tornar um desenvolvedor front-end.
+                    Minha jornada na programação começou quando eu estava
+                    curioso para saber como os sites eram feitos. Foi aí que,
+                    após muita pesquisa e assistindo a vídeos na internet,
+                    encontrei um canal chamado "Curso em Vídeo" do Gustavo
+                    Guanabara. Esse canal foi a minha porta de entrada no mundo
+                    do desenvolvimento web, pois seus tutoriais e didática eram
+                    excelentes. Apesar de ainda não possuir experiência de
+                    mercado na área, estou buscando minha primeira oportunidade.
+                    Para isso, venho adquirindo conhecimentos e experiências por
+                    meio de projetos pessoais e cursos extracurriculares.
+                  </p>
+
+                  <div class="skills">
+                    <h2>Conhecimentos:</h2>
+                    <div class="skills-img">
+                      <figure>
+                        <img
+                          src="assets/img/html.png"
+                          alt="Html5"
+                          title="Html5"
+                        />
+                      </figure>
+                      <figure>
+                        <img
+                          src="assets/img/css.png"
+                          alt="Html5"
+                          title="Css3"
+                        />
+                      </figure>
+                      <figure>
+                        <img
+                          src="assets/img/js.png"
+                          alt="Html5"
+                          title="Javascript"
+                        />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="contacts" class="items">
+              <div class="contacts">
+                <div class="form-contact animate__animated animate__zoomIn">
+                  <form action="" method="POST" id="form">
+                    <div class="input-control">
+                      <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                      />
+                      <span class="msg"></span>
+                    </div>
+                    <div class="input-control">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                      />
+                      <span class="msg"></span>
+                    </div>
+                    <div class="input-control">
+                      <textarea
+                        id="message"
+                        name="message"
+                        cols="30"
+                        rows="10"
+                        placeholder="Digite sua mensagem"
+                      ></textarea>
+                      <span class="msg"></span>
+                    </div>
+                    <button title="Fazer o envio do formulário" type="submit">
+                      Enviar <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </form>
+                </div>
+                <div
+                  class="other-contact animate__animated animate__slideInLeft"
+                >
+                  <div class="social">
+                    <a
+                      href="https://www.linkedin.com/in/gabrielferreeira/"
+                      title="Linkedin"
+                      target="_blank"
+                    >
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://github.com/gabrielferreeira"
+                      title="Github"
+                      target="_blank"
+                    >
+                      <i class="bi bi-github"></i>
+                    </a>
+                  </div>
+                  <div class="curriculum">
+                    <a href="#" title="Currículo" target="_blank">
+                      <i class="bi bi-eye"></i>
+                      Currículo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
         </div>
-      </section>
-
-      <section id="projetos">
-        <div class="center">
-          <h2>Projetos</h2>
-
-          <div class="box-projetos hidden">
-            <div class="box-projetos-itens">
-              <span class="destaque">Destaque</span>
-              <div class="box-projeto-img">
-                <figure>
-                  <img src="assets/img/projeto1.png" alt="" />
-                </figure>
-              </div>
-              <div class="box-projeto-content">
-                <h3>projeto1</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-                  officiis eaque sed vitae debitis doloribus voluptas, labore a
-                  neque expedita error quo blanditiis dolorum quam quas
-                  accusantium id eos esse.
-                </p>
-                <p><span class="tech">Tecológias:</span></p>
-
-                <div class="box-projeto-btns">
-                  <a href="#"><i class="bi bi-globe-americas"></i> Site</a>
-                  <a href="#"><i class="bi bi-github"></i> Repositório</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="box-projetos-itens">
-              <span class="destaque">Destaque</span>
-              <div class="box-projeto-img">
-                <figure>
-                  <img src="assets/img/projeto1.png" alt="" />
-                </figure>
-              </div>
-              <div class="box-projeto-content">
-                <h3>projeto1</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-                  officiis eaque sed vitae debitis doloribus voluptas, labore a
-                  neque expedita error quo blanditiis dolorum quam quas
-                  accusantium id eos esse.
-                </p>
-                <p><span class="tech">Tecológias:</span></p>
-
-                <div class="box-projeto-btns">
-                  <a href="#"><i class="bi bi-globe-americas"></i> Site</a>
-                  <a href="#"><i class="bi bi-github"></i> Repositório</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="box-projetos-itens">
-              <span class="destaque">Destaque</span>
-              <div class="box-projeto-img">
-                <figure>
-                  <img src="assets/img/projeto1.png" alt="" />
-                </figure>
-              </div>
-              <div class="box-projeto-content">
-                <h3>projeto1</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-                  officiis eaque sed vitae debitis doloribus voluptas, labore a
-                  neque expedita error quo blanditiis dolorum quam quas
-                  accusantium id eos esse.
-                </p>
-                <p><span class="tech">Tecológias:</span></p>
-
-                <div class="box-projeto-btns">
-                  <a href="#"><i class="bi bi-globe-americas"></i> Site</a>
-                  <a href="#"><i class="bi bi-github"></i> Repositório</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="box-projetos-itens">
-              <span class="destaque">Destaque</span>
-              <div class="box-projeto-img">
-                <figure>
-                  <img src="assets/img/projeto1.png" alt="" />
-                </figure>
-              </div>
-              <div class="box-projeto-content">
-                <h3>projeto1</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-                  officiis eaque sed vitae debitis doloribus voluptas, labore a
-                  neque expedita error quo blanditiis dolorum quam quas
-                  accusantium id eos esse.
-                </p>
-                <p><span class="tech">Tecológias:</span></p>
-
-                <div class="box-projeto-btns">
-                  <a href="#"><i class="bi bi-globe-americas"></i> Site</a>
-                  <a href="#"><i class="bi bi-github"></i> Repositório</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="box-projetos-itens">
-              <div class="box-projeto-img">
-                <figure>
-                  <img src="assets/img/projeto1.png" alt="" />
-                </figure>
-              </div>
-              <div class="box-projeto-content">
-                <h3>projeto1</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-                  officiis eaque sed vitae debitis doloribus voluptas, labore a
-                  neque expedita error quo blanditiis dolorum quam quas
-                  accusantium id eos esse.
-                </p>
-                <p><span class="tech">Tecológias:</span></p>
-
-                <div class="box-projeto-btns">
-                  <a href="#"><i class="bi bi-globe-americas"></i> Site</a>
-                  <a href="#"><i class="bi bi-github"></i> Repositório</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="box-projetos-itens">
-              <div class="box-projeto-img">
-                <figure>
-                  <img src="assets/img/projeto1.png" alt="" />
-                </figure>
-              </div>
-              <div class="box-projeto-content">
-                <h3>projeto1</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-                  officiis eaque sed vitae debitis doloribus voluptas, labore a
-                  neque expedita error quo blanditiis dolorum quam quas
-                  accusantium id eos esse.
-                </p>
-                <p><span class="tech">Tecológias:</span></p>
-
-                <div class="box-projeto-btns">
-                  <a href="#"><i class="bi bi-globe-americas"></i> Site</a>
-                  <a href="#"><i class="bi bi-github"></i> Repositório</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div title="Carregar mais projetos" class="ver-mais" id="ver-mais">
-            <button><i class="bi bi-plus"></i></button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <section id="contato">
-        <div class="center">
-          <h2>Contatos</h2>
-
-          <div class="contato">
-            <div class="formContato hidden">
-              <form action="#" method="POST">
-                <div class="field">
-                  <label for="nome">Nome completo:</label>
-                  <input
-                    type="text"
-                    name="nome"
-                    placeholder="Nome Completo..."
-                    required
-                  />
-                </div>
-
-                <div class="field">
-                  <label for="email">E-mail:</label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Seu e-mail..."
-                    required
-                  />
-                </div>
-
-                <div class="field">
-                  <label for="msg">Mensagem:</label>
-                  <textarea
-                    name="msg"
-                    cols="30"
-                    rows="10"
-                    placeholder="Descreva sua mensagem..."
-                    required
-                  ></textarea>
-                </div>
-
-                <div class="send">
-                  <input type="submit" value="Enviar" />
-                </div>
-              </form>
-            </div>
-            <div class="socialContato">
-              <a
-                href="https://www.linkedin.com/in/gabrielferreeira/"
-                target="_blank"
-              >
-                <i class="bi bi-linkedin"></i>
-              </a>
-
-              <a href="https://github.com/gabrielferreeira" target="_blank">
-                <i class="bi bi-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="copy">
-        <p>&copy; Gabriel <span>Lopes</span> - Todos os direitos reservados.</p>
       </div>
+    </main>
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> | Todos os direitos reservados.</p>
     </footer>
+    <div class="back-top">
+      <button title="Voltar ao top">
+        <i class="bi bi-arrow-up"></i>
+      </button>
+    </div>
+    <div class="cookies" id="cookies">
+      <p>
+        Atenção! este site ultiliza cookies de privacidade para poder da uma
+        melhor experiência para os usuários. Ao clicar em "Aceitar",
+        consideramos que você esteja de acordo com nossa política de cookies.
+      </p>
+
+      <div class="cookies-btn">
+        <button title="Aceitar" id="accept">Aceitar</button>
+        <button title="Rejeitar" id="reject">Rejeitar</button>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/intersections.js"></script>
+    <script src="assets/js/validate.js"></script>
+    <script src="assets/js/year.js"></script>
+    <script src="assets/js/limited.js"></script>
+    <script src="assets/js/backTop.js"></script>
+    <script src="assets/js/cookies.js"></script>
+    <script src="assets/js/filter.js"></script>
   </body>
-  <script src="assets/js/scripts.js"></script>
 </html>

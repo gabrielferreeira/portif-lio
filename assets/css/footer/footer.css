@@ -1,0 +1,19 @@
+footer.footer {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid transparent;
+  border-image: var(--linearGradientOne);
+  border-image-slice: 1;
+}
+
+footer.footer p {
+  line-height: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--colorBlack);
+}
+
+.dark footer.footer p {
+  color: var(--colorWhite);
+}

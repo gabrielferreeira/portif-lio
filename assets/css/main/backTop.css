@@ -1,0 +1,25 @@
+.back-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: var(--linearGradientOne);
+  overflow: hidden;
+}
+
+.back-top button {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.back-top i {
+  color: var(--colorBlack);
+  font-size: 1.2rem;
+}

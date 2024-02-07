@@ -1,0 +1,40 @@
+.content {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.content header.header-btns {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 60px;
+  border-bottom: 1px solid transparent;
+  border-image: var(--linearGradientOne);
+  border-image-slice: 1;
+  background: transparent;
+}
+
+.content header.header-btns .actions {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--colorBlack);
+  background-color: transparent;
+  height: 60px;
+  cursor: pointer;
+}
+
+.content .main-content {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .content header.header-btns .actions {
+    font-size: 1rem;
+  }
+}
+
+.dark .content header.header-btns .actions {
+  color: var(--colorWhite);
+}
