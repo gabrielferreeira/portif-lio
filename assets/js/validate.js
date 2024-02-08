@@ -2,6 +2,20 @@ const form = document.getElementById("form");
 const user = document.getElementById("nome");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
+const successAlert = document.querySelector(".alert-content.success");
+const errorAlert = document.querySelector(".alert-content.error");
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    const focusedElement = document.activeElement;
+    if (focusedElement.tagName === "TEXTAREA") {
+      event.preventDefault();
+      return;
+    } else if (focusedElement.tagName === "INPUT") {
+      checkForm();
+    }
+  }
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -70,10 +84,16 @@ function checkForm() {
   });
 
   if (validate) {
-    alert("Usuário cadastrado com sucesso.");
+    displayAlert("success");
     clearInputs();
+    setTimeout(() => {
+      successAlert.style.display = "none";
+    }, 3000); // Remover após 3 segundos
   } else {
-    alert("Preencha as informações corretamentes.");
+    displayAlert("error");
+    setTimeout(() => {
+      errorAlert.style.display = "none";
+    }, 3000); // Remover após 3 segundos
   }
 }
 
@@ -84,6 +104,17 @@ function clearInputs() {
   message.value = "";
 }
 
+// FUNÇÃO PARA EXIBIR ALERTA
+function displayAlert(type) {
+  if (type === "success") {
+    successAlert.style.display = "flex";
+    errorAlert.style.display = "none";
+  } else if (type === "error") {
+    successAlert.style.display = "none";
+    errorAlert.style.display = "flex";
+  }
+}
+
 // FUNÇÃO PARA EXIBIR ERRO NOS CAMPOS DE INPUTS
 function inputError(input, message) {
   const formItem = input.parentElement;
@@ -92,3 +123,30 @@ function inputError(input, message) {
   msgItem.innerText = message;
   formItem.className = "input-control error";
 }
+
+// FUNÇÃO PARA LIMPAR O ERRO NOS CAMPOS DE INPUTS
+function clearInputError(input) {
+  const formItem = input.parentElement;
+  const msgItem = formItem.querySelector("span");
+
+  msgItem.innerText = "";
+  formItem.className = "input-control";
+}
+
+// Adicione um ouvinte de evento para o ícone "x" no alerta de sucesso
+successAlert.querySelector(".bi-x").addEventListener("click", () => {
+  successAlert.style.animation = "exit 0.3s ease forwards";
+  setTimeout(() => {
+    successAlert.style.display = "none";
+    successAlert.style.animation = "";
+  }, 300);
+});
+
+// Adicione um ouvinte de evento para o ícone "x" no alerta de erro
+errorAlert.querySelector(".bi-x").addEventListener("click", () => {
+  errorAlert.style.animation = "exit 0.3s ease forwards";
+  setTimeout(() => {
+    errorAlert.style.display = "none";
+    errorAlert.style.animation = "";
+  }, 300);
+});
